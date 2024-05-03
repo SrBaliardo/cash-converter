@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Cash Converter</title>
+</head>
+<body>
+    <main class="main">
+        <label for="">Converter de:
+            <select class="list-one" id="">
+            </select>
+        </label>
+
+        <button class="change">&DownArrowUpArrow;</button>
+
+        <label for="">Converter para:
+            <select class="list-two" name="" id="">
+            </select>
+        </label>
+
+        <label for="">Valor:
+            <input class="input-currency" type="number" placeholder="Digite o valor aqui">
+        </label>
+
+        <button class="btn-convert">Converter</button>
+
+        <section class="results-view">
+            <div class="currency-box">
+                <img class="img-flag to-convert-currency-flag" src="./images/flags/BRL.png" alt="img-convert-flag">
+                <p class="currency-value to-convert-value">---</p>
+            </div>
+            
+            <img class="img-arrow" src="./images/arrow.png" alt="img-arrow">
+            
+            <div class="currency-box">
+                <img class="img-flag converted-currency-flag" src="./images/flags/USD.png" alt="img-converted-flag">
+                <p class="currency-value converted-value">---</p>
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+
+<script src="./js/conversor.js"></script>
+
+</html>
