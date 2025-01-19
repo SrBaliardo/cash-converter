@@ -46,8 +46,8 @@ async function getFirstData(currencyOne, currencyTwo, amount) {
   resultOne = numericAmount * resultRequest.conversion_rates[currencyOne];
   resultAmountOne.innerHTML = `${formatCurrency(resultOne)} ${currencyOne}`;
 
-  imgFlagOne.src = `./src/images/flags/${currencyOne}.png`;
-  imgFlagTwo.src = `./src/images/flags/${currencyTwo}.png`;
+  imgFlagOne.src = `/src/images/flags/${currencyOne}.png`;
+  imgFlagTwo.src = `/src/images/flags/${currencyTwo}.png`;
 
   displayLastUpdate(resultRequest.time_last_update_utc);
 
