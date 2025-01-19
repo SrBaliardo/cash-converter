@@ -98,16 +98,24 @@ btnConvert.addEventListener("click", () => {
   getFirstData(listOne.value, listTwo.value, formattedAmount);
 });
 
-change.addEventListener("click", () => {
-  let valueListOne = listOne.value;
+function handleChangeCurrencies() {
+  let tempCurrency = listOne.value;
   listOne.value = listTwo.value;
-  listTwo.value = valueListOne;
+  listTwo.value = tempCurrency;
+
   updateFlags();
 
   const formattedAmount = inputAmount.value;
   getFirstData(listOne.value, listTwo.value, formattedAmount);
-});
+}
 
-listOne.addEventListener("change", updateFlags);
-listTwo.addEventListener("change", updateFlags);
+function handleCurrencyChange() {
+  const formattedAmount = inputAmount.value;
+  getFirstData(listOne.value, listTwo.value, formattedAmount);
+}
+
+change.addEventListener("click", handleChangeCurrencies);
+
+listOne.addEventListener("change", handleCurrencyChange);
+listTwo.addEventListener("change", handleCurrencyChange);
 inputAmount.addEventListener("input", handleInputFormat);
