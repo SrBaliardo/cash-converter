@@ -46,8 +46,8 @@ async function getFirstData(currencyOne, currencyTwo, amount) {
   resultOne = numericAmount * resultRequest.conversion_rates[currencyOne];
   resultAmountOne.innerHTML = `${formatCurrency(resultOne)} ${currencyOne}`;
 
-  imgFlagOne.src = `srbaliardo/cash-converter/src/images/flags/${currencyOne}.png`;
-  imgFlagTwo.src = `srbaliardo/cash-converter/src/images/flags/${currencyTwo}.png`;
+  imgFlagOne.src = `/src/images/flags/${currencyOne}.png`;
+  imgFlagTwo.src = `/src/images/flags/${currencyTwo}.png`;
 
   displayLastUpdate(resultRequest.time_last_update_utc);
 
@@ -62,8 +62,8 @@ async function getFirstData(currencyOne, currencyTwo, amount) {
 }
 
 function updateFlags() {
-  imgFlagOne.src = `srbaliardo/cash-converter/src/images/flags/${listOne.value}.png`;
-  imgFlagTwo.src = `srbaliardo/cash-converter/src/images/flags/${listTwo.value}.png`;
+  imgFlagOne.src = `/src/images/flags/${listOne.value}.png`;
+  imgFlagTwo.src = `/src/images/flags/${listTwo.value}.png`;
 }
 
 function formatCurrency(value) {
